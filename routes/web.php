@@ -25,6 +25,7 @@ Route::middleware('auth')
           Route::get('sell', 'SellController@showSellForm')->name('sell');
           Route::post('sell', 'SellController@sellItem')->name('sell');
           Route::get('items/{item}/buy', 'ItemsController@showBuyItemForm')->name('item.buy');
+          Route::post('items/{item}/buy', 'ItemsController@buyItem')->name('item.buy');
       });
 
 Route::prefix('mypage')
